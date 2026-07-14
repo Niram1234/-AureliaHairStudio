@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html class="light" lang="ro"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aurelia Hair Studio – Sanctuarul tău de frumusețe în Oradea</title>
+<meta name="description" content="Aurelia Hair Studio – coafură, manichiură, masaj și tratamente de lux în Oradea. Rezervă o programare online sau pe WhatsApp.">
+<script src="js/tailwind.min.js"></script>
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/material-symbols.css" rel="stylesheet">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "@id": "https://AureliaHairStudio.ro",
+  "name": "Aurelia Hair Studio",
+  "description": "Coafură, manichiură, masaj și tratamente de lux în Oradea.",
+  "image": "https://AureliaHairStudio.ro/images/Logo1.jpg",
+  "url": "https://AureliaHairStudio.ro",
+  "telephone": "+40-745-919-066",
+  "email": "contact@aureliahairstudio.ro",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Boda Oszkar 9",
+    "addressLocality": "Oradea",
+    "addressRegion": "Bihor",
+    "postalCode": "410047",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.0261015,
+    "longitude": 21.9328077
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "13:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Oradea"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61572801821095",
+    "https://www.instagram.com/aureliamoga749",
+    "https://www.tiktok.com/@aurelia.moga46"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicii Aurelia Hair Studio",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Coafură & Frizerie",
+          "description": "Tuns, aranjat din perie, coafat ocazii, împletituri"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vopsit",
+          "description": "Vopsit, balayage, airtouch, suvițat, nuanțare"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Masaj",
+          "description": "Masaj relaxare, masaj terapeutic, tratamente faciale"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Manichiură & Pedichiură",
+          "description": "Manichiură simplă, semi-permanentă, gel"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "ratingCount": "500"
+  }
+}
+</script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "gold": "#D4AF37",
+          "champagne": "#F7E7CE",
+          "surface-tint": "#685d4a",
+          "background": "#fbfbe2",
+          "surface-container": "#efefd7",
+          "surface-container-high": "#eaead1",
+          "surface-bright": "#fbfbe2",
+          "surface-variant": "#e4e4cc",
+          "surface": "#fbfbe2",
+          "inverse-primary": "#d3c5ad",
+          "primary-fixed-dim": "#d3c5ad",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-container": "#726753",
+          "surface-dim": "#dbdcc3",
+          "outline": "#7d766c",
+          "inverse-surface": "#303221",
+          "surface-container-highest": "#e4e4cc",
+          "surface-container-low": "#f5f5dc",
+          "outline-variant": "#cec5ba",
+          "on-surface-variant": "#4b463d",
+          "on-surface": "#1b1d0e",
+          "secondary-container": "#fecbcb",
+          "primary": "#685d4a",
+          "primary-fixed": "#f0e0c8",
+          "secondary": "#7b5455",
+          "on-background": "#1b1d0e",
+          "on-primary": "#ffffff",
+          "primary-container": "#f7e7ce"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "2xl": "1rem",
+          "3xl": "1.5rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "section-gap": "120px",
+          "gutter": "24px",
+          "margin-mobile": "20px",
+          "margin-desktop": "80px",
+          "base": "8px"
+        },
+        fontFamily: {
+          "serif": ["Playfair Display", "Georgia", "serif"],
+          "sans": ["Montserrat", "system-ui", "sans-serif"],
+          "display-lg": ["Playfair Display"],
+          "headline-lg": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "body-lg": ["Montserrat"],
+          "body-md": ["Montserrat"],
+          "label-sm": ["Montserrat"]
+        },
+        fontSize: {
+          "display-lg": ["clamp(38px,5vw,64px)", { lineHeight: "1.05", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+          "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+          "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+          "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+          "label-sm": ["11px", { lineHeight: "1.0", letterSpacing: "0.12em", fontWeight: "600" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --gold: #D4AF37;
+    --primary: #685d4a;
+    --champagne: #F7E7CE;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fbfbe2;
+    color: #1b1d0e;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4b463d;
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+  .nav-link:hover { color: var(--primary); }
+  .nav-link.active { color: var(--primary); font-weight: 700; }
+  #site-header:not(.scrolled) .nav-link,
+  #site-header:not(.scrolled) .nav-link.active { color: #fff; }
+  #site-header:not(.scrolled) .nav-link::after { background: #fff; }
+  #site-header:not(.scrolled) .nav-link:hover { color: rgba(255,255,255,0.75); }
+  .brand-label { color: var(--primary); }
+  #site-header:not(.scrolled) .brand-label { color: #fff; }
+
+  /* ─── GOLD DIVIDER ─── */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.35;
+  }
+
+  /* ─── GLASS CARD ─── */
+  .glass {
+    background: rgba(251,251,226,0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.22);
+  }
+
+  /* ─── SERVICE CARD ─── */
+  .service-card {
+    background: #ffffff;
+    border: 1px solid rgba(104,93,74,0.08);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.45s cubic-bezier(.2,0,.2,1), box-shadow 0.45s cubic-bezier(.2,0,.2,1);
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top, rgba(212,175,55,0.06), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 64px rgba(104,93,74,0.12), 0 0 0 1px rgba(212,175,55,0.15);
+  }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon-ring {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: #f7e7ce;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s cubic-bezier(.2,0,.2,1);
+  }
+  .service-card:hover .service-icon-ring { transform: scale(1.15) rotate(6deg); }
+
+  /* ─── GALLERY GRID ─── */
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(.2,0,.2,1);
+  }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(48,50,33,0.6) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.25rem;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  /* ─── TESTIMONIAL CARD ─── */
+  .testimonial-card {
+    background: #ffffff;
+    border: 1px solid rgba(104,93,74,0.08);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(104,93,74,0.09);
+  }
+
+  /* ─── DOTTED LEADER ─── */
+  .dotted-leader {
+    flex-grow: 1;
+    border-bottom: 1px dotted rgba(212,175,55,0.5);
+    margin: 0 8px 4px;
+  }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 1rem 2.25rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(104,93,74,0.22);
+  }
+  .btn-primary:hover {
+    background: #574e3d;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(104,93,74,0.32);
+  }
+  .btn-primary:active { transform: translateY(0) scale(0.97); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1.5px solid rgba(104,93,74,0.5);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 1rem 2.25rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.6);
+  }
+
+  /* ─── STATS BAND ─── */
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+  }
+
+  /* ─── MOBILE MENU ─── */
+  #mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(251,251,226,0.97);
+    backdrop-filter: blur(20px);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+  }
+  #mobile-menu.open { transform: translateX(0); }
+  .mobile-nav-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+    transition: opacity 0.2s;
+  }
+  .mobile-nav-link:hover { opacity: 0.7; }
+
+  /* ─── SCROLL REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s cubic-bezier(.2,0,.2,1), transform 0.75s cubic-bezier(.2,0,.2,1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.8s cubic-bezier(.2,0,.2,1), transform 0.8s cubic-bezier(.2,0,.2,1);
+  }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.8s cubic-bezier(.2,0,.2,1), transform 0.8s cubic-bezier(.2,0,.2,1);
+  }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* Stagger delay helpers */
+  .delay-100 { transition-delay: 0.1s; }
+  .delay-200 { transition-delay: 0.2s; }
+  .delay-300 { transition-delay: 0.3s; }
+  .delay-400 { transition-delay: 0.4s; }
+  .delay-500 { transition-delay: 0.5s; }
+
+  /* ─── ABOUT ARCH IMAGE ─── */
+  .arch-frame {
+    border-radius: 50% 50% 48% 48% / 40% 40% 60% 60%;
+    overflow: hidden;
+  }
+
+  /* ─── SECTION LABELS ─── */
+  .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ─── FOOTER ─── */
+  footer a:hover { color: var(--primary); }
+
+  /* ─── STAR ─── */
+  .star { color: var(--gold); }
+
+  /* ─── SKIP LINK ─── */
+  .skip-link{position:absolute;top:-100%;left:16px;background:var(--primary);color:#fff;padding:0.75rem 1.5rem;border-radius:0 0 8px 8px;z-index:10000;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;text-decoration:none;transition:top 0.2s;}
+  .skip-link:focus{top:0;}
+
+  /* ─── REDUCED MOTION ─── */
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}}
+
+  /* ─── FOCUS VISIBLE ─── */
+  a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+  /* ─── DIPLOMA LIGHTBOX ─── */
+  #diploma-lightbox{position:fixed;inset:0;z-index:9999;background:rgba(10,10,8,0.88);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s;}
+  #diploma-lightbox.show{opacity:1;pointer-events:all;}
+  #diploma-lightbox-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;z-index:10;color:#fff;font-size:24px;}
+  #diploma-lightbox-close:hover{background:rgba(255,255,255,0.25);}
+
+  .diploma-card{
+    width:min(90vw,580px);
+    background:linear-gradient(160deg,#f5e6b8 0%,#f0dda0 20%,#ecdcb0 40%,#f2e4b5 60%,#eedcb2 80%,#f5e6b8 100%);
+    border:3px solid #b8960c;
+    border-radius:4px;
+    padding:6px;
+    position:relative;
+    box-shadow:0 32px 80px rgba(0,0,0,0.45),inset 0 0 60px rgba(184,150,12,0.08);
+    transform:scale(0.92);transition:transform 0.4s cubic-bezier(.2,0,.2,1);
+  }
+  #diploma-lightbox.show .diploma-card{transform:scale(1);}
+
+  .diploma-inner{
+    border:1.5px solid #c9a82680;
+    border-radius:2px;
+    padding:clamp(1.5rem,4vw,2.5rem);
+    position:relative;
+    text-align:center;
+  }
+
+  .diploma-ministry{font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:0.08em;color:#5a4a2a;text-transform:uppercase;line-height:1.4;}
+  .diploma-serie{font-family:'Montserrat',sans-serif;font-size:10px;color:#5a4a2a;margin:6px 0 12px;}
+  .diploma-title{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,30px);font-weight:700;color:#3a2e14;letter-spacing:0.08em;margin-bottom:2px;}
+  .diploma-subtitle{font-family:'Playfair Display',serif;font-size:clamp(12px,2.2vw,16px);font-weight:600;color:#4a3c1e;letter-spacing:0.06em;margin-bottom:16px;}
+  .diploma-text{font-family:'Montserrat',sans-serif;font-size:clamp(11px,1.8vw,13px);line-height:1.8;color:#3a2e14;text-align:left;}
+  .diploma-text strong{font-weight:700;color:#2a1e0a;}
+  .diploma-footer{font-family:'Montserrat',sans-serif;font-size:clamp(10px,1.6vw,12px);line-height:1.7;color:#4a3c1e;text-align:left;margin-top:14px;}
+
+  .diploma-signatures{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:16px;}
+  .diploma-sig{text-align:center;}
+  .diploma-sig-scribble{font-family:'Dancing Script','Playfair Display',serif;font-size:20px;font-style:italic;color:#2a1e0a;height:26px;display:flex;align-items:flex-end;justify-content:center;opacity:0.85;letter-spacing:-0.02em;}
+  .diploma-sig-line{width:80%;height:1px;background:rgba(90,74,42,0.25);margin:2px auto 3px;}
+  .diploma-sig-label{font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:0.1em;text-transform:uppercase;color:#7d6b3a;margin-top:2px;}
+  .diploma-sig-name{font-family:'Playfair Display',serif;font-size:11px;font-style:italic;color:#3a2e14;}
+  .diploma-sig{text-align:center;}
+
+  .diploma-bottom{display:flex;align-items:flex-end;justify-content:space-between;margin-top:14px;gap:12px;}
+  .diploma-seal{width:72px;height:72px;border-radius:50%;border:2px solid #b8960c;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(245,230,184,0.9),rgba(230,210,150,0.7));box-shadow:0 2px 8px rgba(0,0,0,0.15);flex-shrink:0;}
+  .diploma-seal-text{font-family:'Montserrat',sans-serif;font-size:5.5px;font-weight:700;color:#5a4a2a;text-align:center;letter-spacing:0.03em;line-height:1.3;text-transform:uppercase;}
+  .diploma-seal-star{font-size:9px;color:#b8960c;margin:1px 0;}
+
+  .diploma-date{font-family:'Montserrat',sans-serif;font-size:clamp(9px,1.4vw,11px);color:#5a4a2a;text-align:left;margin-top:10px;}
+</style>
+</head>
+<body style="overflow: auto;">
+
+<a href="#main-content" class="skip-link">Salt la conținut</a>
+
+<!-- ═══════════════════ MOBILE MENU ═══════════════════ -->
+<div id="mobile-menu" role="dialog" aria-label="Meniu principal">
+  <button id="close-menu" class="absolute top-6 right-6 p-2 text-primary" aria-label="Închide meniu">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+  <a class="mobile-nav-link" href="index.html">Acasă</a>
+  <a class="mobile-nav-link" href="Servicii.html">Servicii</a>
+  <a class="mobile-nav-link" href="Galerie.html">Galerie</a>
+  <a class="mobile-nav-link" href="Testimoniale.html">Testimoniale</a>
+  <a class="mobile-nav-link" href="Contact.html">Contact</a>
+  <a href="Rezervari.html" class="btn-primary mt-4" style="background:var(--primary)">Rezervă acum</a>
+</div>
+
+<!-- ═══════════════════ DIPLOMA LIGHTBOX ═══════════════════ -->
+<div id="diploma-lightbox" role="dialog" aria-modal="true" onclick="closeDiplomaLightbox()">
+  <button id="diploma-lightbox-close" aria-label="Închide" onclick="closeDiplomaLightbox()">
+    <span class="material-symbols-outlined" style="font-size:22px;">close</span>
+  </button>
+
+  <div class="diploma-card" onclick="event.stopPropagation()">
+    <div class="diploma-inner">
+
+      <!-- Ministere + Stemă -->
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2px;">
+        <div class="diploma-ministry" style="text-align:left;max-width:130px;">Ministerul Muncii și<br>Solidarității Sociale</div>
+        <div style="text-align:center;flex-shrink:0;">
+          <img src="images/Stema Romaniei.png" alt="Stema României" style="width:60px;height:auto;display:block;margin:0 auto 2px;">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;color:#5a4a2a;">ROMÂNIA</div>
+        </div>
+        <div class="diploma-ministry" style="text-align:right;max-width:130px;">Ministerul Educației</div>
+      </div>
+
+      <!-- Serie -->
+      <div class="diploma-serie">Serie <strong>N</strong> Nr. <strong>0012191</strong> <span style="float:right;">TS</span></div>
+
+      <!-- Titlu -->
+      <div class="diploma-title">CERTIFICAT</div>
+      <div class="diploma-subtitle">DE CALIFICARE PROFESIONALĂ</div>
+
+      <!-- Text principal -->
+      <div class="diploma-text">
+        <strong>Aurelia Hair Studio</strong> a participat în perioada <strong>13.10.2023 – 10.02.2024</strong> la programul de perfecționare în arta coafurii și a stylingului profesional, cu durata de <strong>720 de ore</strong>, organizat de <strong>S.C. Metropolitan Events S.R.L.</strong>, cu sediul în localitatea <strong>Sibiu</strong>, județul <strong>Sibiu</strong>, înmatriculat în Registrul național al furnizorilor de formare profesională a adulților cu nr. <strong>32/1094</strong> din <strong>06.10.2023</strong>, și a susținut cu succes proba de certificare în anul <strong>2024</strong>, luna <strong>martie</strong>, ziua <strong>7</strong>, obținând media <strong>10,00</strong> și calificarea de <strong>Hairstylist Profesionist</strong> cu certificare de specialitate.
+      </div>
+
+      <!-- Footer legal -->
+      <div class="diploma-footer">
+        Prezentul certificat se eliberează în conformitate cu prevederile Ordonanței Guvernului nr. 129/2000, republicată și este însoțit de suplimentul descriptiv al certificatului.
+      </div>
+
+      <img src="images/FirmaD.png" alt="Semnături și sigiliu" style="width:100%;height:auto;display:block;margin-top:14px;border-radius:2px;">
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(251,251,226,0);transition:all 0.3s;">
+  <div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-margin-desktop h-20">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex flex-col items-center flex-shrink-0" style="margin-left:-44px;">
+      <img src="images/Logo1.jpg" alt="Aurelia Hair Studio" class="h-10 w-10 rounded-full object-cover shadow-sm">
+      <span class="brand-label" style="font-family:'Montserrat';font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Aurelia Hair Studio</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center space-x-8">
+      <a class="nav-link active" href="index.html">Acasă</a>
+      <a class="nav-link" href="Servicii.html">Servicii</a>
+      <a class="nav-link" href="Galerie.html">Galerie</a>
+      <a class="nav-link" href="Testimoniale.html">Testimoniale</a>
+      <a class="nav-link" href="Contact.html">Contact</a>
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+40745919066" class="p-2 text-on-surface-variant hover:text-primary transition-colors" title="Sună-ne">
+        <i class="fa-solid fa-phone" style="color:#25D366"></i>
+      </a>
+      <a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" class="p-2 text-on-surface-variant hover:text-primary transition-colors" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp" style="color:#25D366"></i>
+      </a>
+      <a href="Rezervari.html" class="btn-primary">Rezervă acum</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="open-menu" class="md:hidden p-2 text-primary" aria-label="Deschide meniu">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="relative h-[460px] md:h-[560px] flex items-center overflow-hidden">
+
+  <!-- Background: salon gray -->
+  <div class="absolute inset-0" style="background:#8B8A84;"></div>
+
+  <!-- Roscata portrait – left 38% (hidden on mobile) -->
+  <div class="absolute inset-y-0 left-0 w-[38%] overflow-hidden hidden md:block">
+    <img src="images/aida_img005.jpg" alt="Aurelia Hair Studio – păr magnific" class="w-full h-full object-cover object-[70%_center]" loading="eager">
+    <!-- Blend edge to gray background -->
+    <div class="absolute inset-y-0 right-0 w-24" style="background:linear-gradient(to right, transparent, #8B8A84);"></div>
+  </div>
+
+  <!-- Subtle dark gradient for text zone – right side (hidden on mobile) -->
+  <div class="absolute inset-y-0 right-0 w-[62%] hidden md:block" style="background:linear-gradient(135deg, rgba(27,29,14,0.25) 0%, rgba(27,29,14,0.08) 40%, transparent 100%);"></div>
+
+  <!-- On mobile: full-width subtle dark gradient -->
+  <div class="absolute inset-0 md:hidden" style="background:linear-gradient(to bottom, rgba(27,29,14,0.05) 0%, rgba(27,29,14,0.25) 100%);"></div>
+
+  <!-- Floating accent blob -->
+  <div class="absolute bottom-0 left-0 w-80 h-80 blur-[120px] -z-0 pointer-events-none" style="background:rgba(212,175,55,0.12); border-radius:50%;"></div>
+
+  <div class="relative z-10 max-w-[1280px] mx-auto px-6 md:px-margin-desktop w-full pt-24">
+    <div class="max-w-2xl md:ml-[42%]">
+      <span class="eyebrow" style="color:rgba(212,175,55,0.9)">Coafură &amp; Îngrijire · Oradea</span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,68px);font-weight:700;line-height:1.05;letter-spacing:-0.02em;color:#fff;margin-bottom:1.5rem;">
+        Bine ați venit la<br><em style="color:#D4AF37;font-style:italic;">Aurelia Hair Studio</em>
+      </h1>
+      <p style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:400;line-height:1.65;color:rgba(255,255,255,0.82);max-width:540px;">
+        Coafură, manichiură și masaj într-un spațiu primitor, unde atenția la detalii și relaxarea sunt pe primul loc.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════ STATS BAND ═══════════════════ -->
+<section class="bg-white border-y border-primary/8">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="reveal">
+        <div class="stat-number">500+</div>
+        <div style="font-family:'Montserrat';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#4b463d;margin-top:6px;">Clienți Fericiți</div>
+      </div>
+      <div class="reveal delay-100">
+        <div class="stat-number">5★</div>
+        <div style="font-family:'Montserrat';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#4b463d;margin-top:6px;">Rating Google</div>
+      </div>
+      <div class="reveal delay-200">
+        <div class="stat-number">8+</div>
+        <div style="font-family:'Montserrat';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#4b463d;margin-top:6px;">Ani Experiență</div>
+      </div>
+      <div class="reveal delay-300">
+        <div class="stat-number">3</div>
+        <div style="font-family:'Montserrat';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#4b463d;margin-top:6px;">Domenii Activitate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<section class="py-16 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+    <!-- Text side -->
+    <div class="space-y-4 reveal-left visible">
+      <span class="eyebrow">Despre Noi</span>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);font-weight:700;color:#1b1d0e;line-height:1.15;">Grijă pentru Tine,<br>Rezultate pe Măsură</h2>
+      <div class="gold-line"></div>
+      <p style="font-family:'Montserrat',sans-serif;font-size:17px;line-height:1.7;color:#4b463d;">
+        La Aurelia Hair Studio, credem că frumusețea nu este doar despre aspect, ci despre modul în care vă simțiți. Studio-ul nostru este un spațiu primitor, gândit pentru ca fiecare vizită să vă ofere o experiență plăcută.
+      </p>
+      <p style="font-family:'Montserrat',sans-serif;font-size:15px;line-height:1.65;color:#7d766c;">
+        Folosim produse de calitate și tehnici actualizate pentru a ne asigura că rezultatul este mereu pe placul dumneavoastră. De la coafuri de zi cu zi la tratamente de păr și relaxare.
+      </p>
+      <div style="display:flex;flex-direction:column;align-items:center;padding-top:1rem; width: 100%;">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">verified</span>
+          <span style="font-family:'Montserrat';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#685d4a;">Certificare Profesională</span>
+        </div>
+        <!-- Diploma — clickabil pentru lightbox -->
+        <div role="button" tabindex="0" onclick="openDiplomaLightbox()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDiplomaLightbox();}" style="margin-top: 1.5rem; cursor: pointer; width: 100%; max-width: 320px; border: 2px solid var(--gold); border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(160deg, rgb(245, 230, 184), rgb(240, 221, 160), rgb(236, 220, 176)); position: relative; padding: 16px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: rgba(184, 150, 12, 0.15) 0px 4px 16px; transform: translateY(0px);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(184,150,12,0.25)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(184,150,12,0.15)'">
+          <div style="position:absolute; top:4px; left:4px; right:4px; bottom:4px; border:1px solid #c9a82660; border-radius:4px;"></div>
+          <span style="font-family:'Playfair Display',serif; font-size:11px; font-weight:700; color:#4a3c1e; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:4px;">Certificat de Calificare</span>
+          <span style="font-family:'Playfair Display',serif; font-size:10px; color:#5a4a2a; letter-spacing:0.06em; margin-bottom:6px;">Profesională</span>
+          <span style="font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:#2a1e0a; text-align:center; line-height:1.2;">Aurelia Hair Studio</span>
+          <span style="font-family:'Montserrat',sans-serif; font-size:8px; color:#7d6b3a; margin-top:6px; letter-spacing:0.1em; text-transform:uppercase;">Hairstylist Profesionist</span>
+          <div style="margin-top:8px;display:flex;align-items:center;gap:4px;">
+            <span class="material-symbols-outlined" style="font-size:12px;color:#b8960c;">touch_app</span>
+            <span style="font-family:'Montserrat',sans-serif;font-size:8px;color:#7d6b3a;letter-spacing:0.08em;">Click pentru detalii</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image side -->
+    <div class="relative reveal-right visible">
+      <!-- Main image -->
+      <div style="border-radius:50% 50% 48% 48% / 38% 38% 62% 62%;overflow:hidden;aspect-ratio:4/5;position:relative;">
+        <img src="images/RMorenaR.jpg" alt="Aurelia – Stilistă" class="w-full h-full object-cover object-top">
+      </div>
+      <!-- Floating philosophy card -->
+      <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 glass p-6 rounded-2xl shadow-xl max-w-xs" style="background:rgba(247,231,206,0.92);border:1px solid rgba(212,175,55,0.3);">
+        <p style="font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:#4f4533;line-height:1.5;">"Frumusețea începe cu grija pentru tine"</p>
+        <div class="gold-line mt-3"></div>
+        <span style="font-family:'Montserrat';font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:#685d4a;display:block;margin-top:8px;">Filosofia Noastră</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer style="background:#efefd7;border-top:1px solid rgba(104,93,74,0.12);">
+  <nav aria-label="Navigare footer">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--primary);">Aurelia Hair Studio</div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:14px;line-height:1.65;color:#4b463d;">Coafură, manichiură și relaxare în Oradea.</p>
+        <div class="flex gap-3 pt-2">
+          <a href="https://www.facebook.com/profile.php?id=61572801821095" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-facebook text-sm" style="color:#1877F2"></i></a>
+          <a href="https://www.instagram.com/aureliamoga749?igsh=M29ramxvZG9yc3p6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-instagram text-sm" style="color:#E4405F"></i></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Aurelia+Hair+Studio+Boda+Oszkar+9+Oradea" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-google text-sm" style="color:#4285F4"></i></a>
+          <a href="https://www.tiktok.com/@aurelia.moga46?_r=1&_t=ZN-96ePt0rUFc6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-tiktok text-sm"></i></a>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="Contact.html" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;transition:color 0.2s;"><i class="fa-solid fa-location-dot" style="color:var(--primary);width:16px;"></i> Boda Oszkar 9, Oradea</a></li>
+          <li><a href="tel:+40745919066" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;transition:color 0.2s;"><i class="fa-solid fa-phone" style="color:#25D366;width:16px;"></i> +40 745 919 066</a></li>
+          <li><a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;transition:color 0.2s;"><i class="fa-brands fa-whatsapp" style="color:#25D366;width:16px;"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Program</h4>
+        <ul class="space-y-2" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">
+          <li>Luni – Vineri: 10:00 – 20:00</li>
+          <li>Sâmbătă: 10:00 – 16:00</li>
+          <li>Duminică: 13:00 – 17:00</li>
+        </ul>
+        <p style="font-family:'Montserrat';font-size:11px;color:#7d766c;font-style:italic;margin-top:6px;">Nu găsiți un interval potrivit? <a href="tel:+40745919066" style="text-decoration:underline;color:var(--primary);">Sunați-ne</a></p>
+      </div>
+
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Servicii Populare</h4>
+        <ul class="space-y-3">
+          <li><a href="Servicii.html#coafura" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Coafură &amp; Frizerie</a></li>
+          <li><a href="Servicii.html#manichiura" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Manichiură &amp; Pedichiură</a></li>
+          <li><a href="Servicii.html#vopsit" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Vopsit</a> &amp; <a href="Servicii.html#masaj" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Masaj</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(104,93,74,0.1);">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-6 text-center">
+      <p style="font-family:'Montserrat';font-size:11px;letter-spacing:0.08em;color:#7d766c;">© <span id="copyright-year"></span> Aurelia Hair Studio Oradea. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+  </nav>
+</footer>
+
+<!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+<script>
+  // ─── HEADER scroll effect
+  const header = document.getElementById('site-header');
+  function updateHeader() {
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+      header.style.background = 'rgba(251,251,226,0.95)';
+      header.style.backdropFilter = 'blur(18px)';
+      header.style.borderBottom = '1px solid rgba(104,93,74,0.12)';
+      header.style.boxShadow = '0 4px 24px rgba(104,93,74,0.08)';
+    } else {
+      header.classList.remove('scrolled');
+      header.style.background = '';
+      header.style.backdropFilter = '';
+      header.style.borderBottom = '';
+      header.style.boxShadow = '';
+    }
+  }
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
+
+  // ─── MOBILE MENU
+  document.getElementById('open-menu').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('close-menu').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+
+  // ─── SCROLL REVEAL
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ─── DIPLOMA LIGHTBOX
+  function openDiplomaLightbox() {
+    document.getElementById('diploma-lightbox').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDiplomaLightbox() {
+    document.getElementById('diploma-lightbox').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDiplomaLightbox();
+  });
+
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+
+</body></html>

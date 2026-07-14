@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html class="light" lang="ro">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rezervări – Aurelia Hair Studio Oradea | Programare Online</title>
+<meta name="description" content="Rezervă o programare online la Aurelia Hair Studio Oradea. Coafură, manichiură, masaj. Confirmare rapidă prin WhatsApp."/>
+<script src="js/tailwind.min.js"></script>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/material-symbols.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/fontawesome.min.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "@id": "https://AureliaHairStudio.ro",
+  "name": "Aurelia Hair Studio",
+  "description": "Coafură, manichiură, masaj și tratamente de lux în Oradea.",
+  "image": "https://AureliaHairStudio.ro/images/Logo1.jpg",
+  "url": "https://AureliaHairStudio.ro",
+  "telephone": "+40-745-919-066",
+  "email": "contact@aureliahairstudio.ro",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Boda Oszkar 9",
+    "addressLocality": "Oradea",
+    "addressRegion": "Bihor",
+    "postalCode": "410047",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.0261015,
+    "longitude": 21.9328077
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "13:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Oradea"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61572801821095",
+    "https://www.instagram.com/aureliamoga749",
+    "https://www.tiktok.com/@aurelia.moga46"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicii Aurelia Hair Studio",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Coafură & Frizerie",
+          "description": "Tuns, aranjat din perie, coafat ocazii, împletituri"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vopsit",
+          "description": "Vopsit, balayage, airtouch, suvițat, nuanțare"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Masaj",
+          "description": "Masaj relaxare, masaj terapeutic, tratamente faciale"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Manichiură & Pedichiură",
+          "description": "Manichiură simplă, semi-permanentă, gel"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "ratingCount": "500"
+  }
+}
+</script>
+<script id="tailwind-config">
+  tailwind.config={darkMode:"class",theme:{extend:{colors:{"gold":"#D4AF37","background":"#fbfbe2","surface-container":"#efefd7","surface-container-low":"#f5f5dc","surface":"#fbfbe2","primary":"#685d4a","on-primary":"#ffffff","primary-container":"#f7e7ce","on-primary-container":"#726753","on-surface":"#1b1d0e","on-surface-variant":"#4b463d","primary-fixed":"#f0e0c8","outline":"#7d766c","secondary":"#7b5455","secondary-container":"#fecbcb"},spacing:{"section-gap":"120px","margin-desktop":"80px","margin-mobile":"20px"}}}}
+</script>
+<style>
+  :root{--gold:#D4AF37;--primary:#685d4a;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Montserrat',sans-serif;background:#fbfbe2;color:#1b1d0e;overflow-x:hidden;}
+
+  .nav-link{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4b463d;transition:color 0.3s;position:relative;padding-bottom:2px;}
+  .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+  .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);}
+  .nav-link:hover,.nav-link.active{color:var(--primary);}
+  .nav-link.active{font-weight:700;}
+  #site-header:not(.scrolled) .nav-link,
+  #site-header:not(.scrolled) .nav-link.active{color:#fff;}
+  #site-header:not(.scrolled) .nav-link::after{background:#fff;}
+  #site-header:not(.scrolled) .nav-link:hover{color:rgba(255,255,255,0.75);}
+  .brand-label{color:var(--primary);}
+  #site-header:not(.scrolled) .brand-label{color:#fff;}
+  .gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.35;}
+  .eyebrow{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem;}
+
+  /* MOBILE MENU */
+  #mobile-menu{position:fixed;inset:0;background:rgba(251,251,226,0.97);backdrop-filter:blur(20px);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform 0.4s cubic-bezier(.77,0,.18,1);}
+  #mobile-menu.open{transform:translateX(0);}
+  .mobile-nav-link{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:var(--primary);transition:opacity 0.2s;}
+  .mobile-nav-link:hover{opacity:0.7;}
+
+  /* BTNS */
+  .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--primary);color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2.25rem;border-radius:9999px;transition:all 0.3s;box-shadow:0 8px 24px rgba(104,93,74,0.22);}
+  .btn-primary:hover{background:#574e3d;transform:translateY(-2px);box-shadow:0 16px 40px rgba(104,93,74,0.32);}
+
+  /* BOOKING GLASS PANEL */
+  .booking-panel{
+    background:rgba(255,255,255,0.72);
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+    border:1px solid rgba(255,255,255,0.5);
+    border-radius:2rem;
+    box-shadow:0 32px 80px rgba(104,93,74,0.13);
+    padding:3rem;
+  }
+  @media(max-width:768px){.booking-panel{padding:2rem 1.5rem;border-radius:1.25rem;}}
+
+  /* STEP LABEL */
+  .step-label{
+    font-family:'Montserrat',sans-serif;
+    font-size:10px;font-weight:700;
+    letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--primary);
+    display:flex;align-items:center;gap:8px;
+    margin-bottom:12px;
+  }
+  .step-label::before{
+    content:attr(data-step);
+    width:22px;height:22px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:10px;font-weight:700;
+    flex-shrink:0;
+  }
+
+  /* SERVICE CARD (booking) */
+  .svc-btn{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.1rem 1.25rem;
+    background:#fff;
+    border:1.5px solid rgba(104,93,74,0.12);
+    border-radius:0.875rem;
+    cursor:pointer;
+    transition:all 0.25s;
+    text-align:left;
+    width:100%;
+  }
+  .svc-btn:hover{border-color:rgba(104,93,74,0.35);background:#fdf8f2;}
+  .svc-btn.selected{
+    background:var(--primary);
+    border-color:var(--primary);
+    color:#fff;
+    box-shadow:0 8px 24px rgba(104,93,74,0.25);
+  }
+  .svc-btn.selected .svc-name,.svc-btn.selected .svc-sub{color:#fff;}
+  .svc-btn.selected .svc-icon{color:#fff;}
+  .svc-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#1b1d0e;display:block;}
+  .svc-sub{font-family:'Montserrat',sans-serif;font-size:12px;color:#4b463d;}
+  .svc-icon{font-size:20px!important;color:var(--primary);}
+
+  /* TIME SLOTS */
+  .time-slot{
+    padding:8px 12px;
+    border:1.5px solid rgba(104,93,74,0.15);
+    border-radius:0.5rem;
+    font-family:'Montserrat',sans-serif;
+    font-size:13px;font-weight:600;
+    color:#4b463d;
+    cursor:pointer;
+    transition:all 0.2s;
+    text-align:center;
+    background:#fff;
+  }
+  .time-slot:hover{border-color:var(--primary);color:var(--primary);}
+  .time-slot.selected{background:var(--primary);border-color:var(--primary);color:#fff;}
+  .time-slot.disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;}
+
+  /* CALENDAR */
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+  .cal-day{
+    aspect-ratio:1;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Montserrat',sans-serif;
+    font-size:12px;font-weight:500;
+    border-radius:50%;
+    cursor:pointer;
+    transition:all 0.2s;
+    color:#1b1d0e;
+    border:2px solid transparent;
+  }
+  .cal-day:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,175,55,0.3);}
+  .cal-day:hover:not(.cal-past):not(.cal-empty){background:#f0e0c8;}
+  .cal-day.cal-past{color:#cec5ba;cursor:not-allowed;}
+  .cal-day.cal-empty{cursor:default;}
+  .cal-day.cal-today{border:1.5px solid var(--gold);color:var(--primary);font-weight:700;}
+  .cal-day.cal-selected{background:var(--primary);color:#fff!important;font-weight:700;}
+  .cal-header-day{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#7d766c;text-align:center;padding:4px 0;}
+
+  /* QUIET INPUT */
+  .quiet-input{border:none;border-bottom:1.5px solid rgba(212,175,55,0.35);background:transparent;border-radius:0;padding:10px 0;width:100%;font-family:'Montserrat',sans-serif;font-size:15px;color:#1b1d0e;outline:none;transition:border-bottom 0.3s;}
+  .quiet-input::placeholder{color:#7d766c;}
+  .quiet-input:focus{border-bottom:2px solid var(--primary);}
+  .field-label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);display:block;margin-bottom:6px;}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s,transform 0.7s;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+
+  /* SUMMARY BOX */
+  .summary-box{background:#f7e7ce;border:1px solid rgba(212,175,55,0.3);border-radius:1rem;padding:1.25rem;}
+  .summary-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(212,175,55,0.2);font-family:'Montserrat',sans-serif;font-size:13px;}
+  .summary-row:last-child{border-bottom:none;}
+  .summary-key{color:#4b463d;}
+  .summary-val{font-weight:600;color:#1b1d0e;}
+
+  /* SUCCESS */
+  #booking-success{display:none;text-align:center;padding:3rem 2rem;}
+  #booking-success .check-ring{
+    width:80px;height:80px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--primary),#9b8a73);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 1.5rem;
+    animation:pop-in 0.5s cubic-bezier(.2,0,.2,1);
+  }
+  @keyframes pop-in{from{transform:scale(0);}to{transform:scale(1);}}
+  @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+  footer a:hover{color:var(--primary);}
+  .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;z-index:9999;text-decoration:none;transition:top 0.2s;}.skip-link:focus{top:0;}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Salt la conținut</a>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" role="dialog" aria-label="Meniu principal">
+  <button id="close-menu" class="absolute top-6 right-6 p-2 text-primary" aria-label="Închide meniu">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+  <a class="mobile-nav-link" href="index.html">Acasă</a>
+  <a class="mobile-nav-link" href="Servicii.html">Servicii</a>
+  <a class="mobile-nav-link" href="Galerie.html">Galerie</a>
+  <a class="mobile-nav-link" href="Testimoniale.html">Testimoniale</a>
+  <a class="mobile-nav-link" href="Contact.html">Contact</a>
+  <a href="Rezervari.html" class="btn-primary mt-4">Rezervă acum</a>
+</div>
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(251,251,226,0);transition:all 0.3s;">
+  <div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-margin-desktop h-20">
+    <a href="index.html" class="flex flex-col items-center flex-shrink-0" style="margin-left:-44px;">
+      <img src="images/Logo1.jpg" alt="Aurelia Hair Studio" class="h-10 w-10 rounded-full object-cover shadow-sm"/>
+      <span class="brand-label" style="font-family:'Montserrat';font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Aurelia Hair Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a class="nav-link" href="index.html">Acasă</a>
+      <a class="nav-link" href="Servicii.html">Servicii</a>
+      <a class="nav-link" href="Galerie.html">Galerie</a>
+      <a class="nav-link" href="Testimoniale.html">Testimoniale</a>
+      <a class="nav-link" href="Contact.html">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+40745919066" class="p-2 hover:text-primary transition-colors"><i class="fa-solid fa-phone" style="color:#25D366"></i></a>
+      <a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" class="p-2 hover:text-primary transition-colors"><i class="fa-brands fa-whatsapp" style="color:#25D366"></i></a>
+      <a href="Rezervari.html" class="btn-primary">Rezervă acum</a>
+    </div>
+    <button id="open-menu" class="md:hidden p-2 text-primary">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden">
+  <!-- 3-image triptych -->
+  <div class="absolute inset-0 flex" style="transform:scale(1.04);">
+    <!-- Left: Blond.jpg (hidden on mobile) -->
+    <div class="w-1/3 overflow-hidden relative hidden md:block">
+      <img src="images/Blond.jpg" alt="Rezervă o programare – Aurelia Hair Studio" class="w-full h-full object-cover object-top"/>
+    </div>
+    <!-- Center: Superba Coafura.jpg (full width on mobile) -->
+    <div class="w-full md:w-1/3 overflow-hidden relative">
+      <img src="images/Superba Coafura.jpg" alt="Rezervă o programare – Aurelia Hair Studio" class="w-full h-full object-cover object-center"/>
+    </div>
+    <!-- Right: Brunet cu Barba.jpg (hidden on mobile) -->
+    <div class="w-1/3 overflow-hidden relative hidden md:block">
+      <img src="images/Brunet cu Barba.jpg" alt="Rezervă o programare – Aurelia Hair Studio" class="w-full h-full object-cover object-center"/>
+    </div>
+  </div>
+  <!-- Gradient overlay for readability -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(27,29,14,0.45),rgba(27,29,14,0.15));"></div>
+  <div class="relative z-10 text-center px-6 pt-20">
+    <span style="font-family:'Montserrat';font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(212,175,55,0.9);display:block;margin-bottom:1rem;">Programare Online</span>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,62px);font-weight:700;color:#fff;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1rem;">Rezervă o Programare</h1>
+    <div style="height:1px;width:80px;background:linear-gradient(90deg,transparent,rgba(212,175,55,0.7),transparent);margin:0 auto;"></div>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="py-section-gap">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+      <!-- LEFT INFO COLUMN -->
+      <div class="lg:col-span-4 space-y-8 reveal">
+
+        <!-- Salon image -->
+        <div style="border-radius:1.25rem;overflow:hidden;aspect-ratio:4/5;position:relative;box-shadow:0 20px 48px rgba(104,93,74,0.15);">
+          <img src="images/Coafura2.png" alt="Aurelia Hair Studio" class="w-full h-full object-cover object-center"/>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(48,50,33,0.6) 0%,transparent 55%);"></div>
+          <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;">
+            <p style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:#fff;line-height:1.35;">"Transformăm frumusețea într-o artă."</p>
+          </div>
+        </div>
+
+        <!-- Policy -->
+        <div style="background:#fff;border-radius:1rem;border:1px solid rgba(104,93,74,0.1);padding:1.5rem;">
+          <div style="font-family:'Montserrat';font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;">Politică Salon</div>
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;line-height:1.65;color:#4b463d;">Vă rugăm să sosiți cu 5–10 minute înainte de ora programată pentru a vă bucura de o băutură de întâmpinare.</p>
+        </div>
+
+        <!-- Important note -->
+        <div style="background:rgba(104,93,74,0.06);border:1px solid rgba(104,93,74,0.12);border-radius:0.75rem;padding:1.25rem 1.5rem;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="material-symbols-outlined" style="color:var(--primary);font-size:18px;font-variation-settings:'FILL' 1;">info</span>
+            <span style="font-family:'Montserrat';font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);">Notă Importantă</span>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;line-height:1.65;color:#4b463d;">Anulările trebuie anunțate cu cel puțin 24 de ore înainte pentru a evita taxa de rezervare.</p>
+        </div>
+
+        <!-- Direct contact -->
+        <div style="background:#fff;border-radius:1rem;border:1px solid rgba(104,93,74,0.1);padding:1.5rem;space-y:8px;">
+          <div style="font-family:'Montserrat';font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);margin-bottom:12px;">Contact Direct</div>
+          <div class="flex flex-col gap-3">
+            <a href="tel:+40745919066" style="display:flex;align-items:center;gap:10px;font-family:'Montserrat';font-size:14px;color:#4b463d;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='#4b463d'">
+              <i class="fa-solid fa-phone" style="color:#25D366;width:18px;"></i> +40 745 919 066
+            </a>
+            <a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-family:'Montserrat';font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:9999px;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+              <i class="fa-brands fa-whatsapp"></i> Mesaj WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT BOOKING FORM -->
+      <div class="lg:col-span-8 reveal" style="transition-delay:0.15s;">
+        <div class="booking-panel">
+
+          <!-- Success state (hidden initially) -->
+          <div id="booking-success">
+            <div class="check-ring">
+              <span class="material-symbols-outlined" style="color:#fff;font-size:36px;font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+            <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--primary);margin-bottom:0.75rem;">Cerere trimisă cu succes!</h2>
+            <div style="background:#f7e7ce;border-radius:0.75rem;padding:1.25rem;text-align:left;max-width:360px;margin:0 auto 1.25rem;">
+              <div style="font-family:'Montserrat';font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;">Rezumatul Rezervării</div>
+              <div style="display:flex;justify-content:space-between;font-family:'Montserrat';font-size:13px;padding:5px 0;border-bottom:1px solid rgba(212,175,55,0.2);"><span style="color:#4b463d;">Serviciu</span><span style="font-weight:600;color:#1b1d0e;" id="srv-summary">–</span></div>
+              <div style="display:flex;justify-content:space-between;font-family:'Montserrat';font-size:13px;padding:5px 0;border-bottom:1px solid rgba(212,175,55,0.2);"><span style="color:#4b463d;">Data</span><span style="font-weight:600;color:#1b1d0e;" id="dt-summary">–</span></div>
+              <div style="display:flex;justify-content:space-between;font-family:'Montserrat';font-size:13px;padding:5px 0;"><span style="color:#4b463d;">Ora</span><span style="font-weight:600;color:#1b1d0e;" id="tm-summary">–</span></div>
+            </div>
+            <p id="response-msg" style="font-family:'Montserrat',sans-serif;font-size:14px;color:#4b463d;line-height:1.6;max-width:400px;margin:0 auto 1rem;"></p>
+            <p style="font-family:'Montserrat',sans-serif;font-size:11px;color:#7d766c;margin-bottom:0.5rem;">🕐 Luni–Vineri 10:00–20:00 · Sâmbătă 10:00–16:00 · Duminică 13:00–17:00</p>
+            <p style="font-family:'Montserrat',sans-serif;font-size:11px;color:#7d766c;font-style:italic;margin-bottom:1.5rem;">Nu găsiți un interval potrivit? <a href="tel:+40745919066" style="text-decoration:underline;color:var(--primary);">Sunați-ne</a></p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a id="whatsapp-success-link" href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-family:'Montserrat';font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.85rem 1.75rem;border-radius:9999px;"><i class="fa-brands fa-whatsapp"></i> Contactați pe WhatsApp</a>
+              <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(104,93,74,0.3);color:var(--primary);font-family:'Montserrat';font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.85rem 1.75rem;border-radius:9999px;">Înapoi Acasă</a>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form id="booking-form" class="space-y-10" novalidate>
+
+            <!-- STEP 1: SERVICE -->
+            <div>
+              <div class="step-label" data-step="1">Alegeți Serviciul</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="service-grid">
+                <button class="svc-btn" type="button" data-service="Coafură & Styling">
+                  <div>
+                    <span class="svc-name">Coafură</span>
+                    <span class="svc-sub">Tuns, Vopsit, Tratament</span>
+                  </div>
+                  <span class="material-symbols-outlined svc-icon">content_cut</span>
+                </button>
+                <button class="svc-btn" type="button" data-service="Vopsit & Balayage">
+                  <div>
+                    <span class="svc-name">Vopsit</span>
+                    <span class="svc-sub">Balayage, Tehnici Moderne</span>
+                  </div>
+                  <span class="material-symbols-outlined svc-icon">palette</span>
+                </button>
+                <button class="svc-btn" type="button" data-service="Manichiură & Pedichiură">
+                  <div>
+                    <span class="svc-name">Manichiură</span>
+                    <span class="svc-sub">Simplă, Semi, Gel</span>
+                  </div>
+                  <span class="material-symbols-outlined svc-icon">brush</span>
+                </button>
+                <button class="svc-btn" type="button" data-service="Masaj">
+                  <div>
+                    <span class="svc-name">Masaj</span>
+                    <span class="svc-sub">Relaxare, Terapeutic</span>
+                  </div>
+                  <span class="material-symbols-outlined svc-icon">spa</span>
+                </button>
+              </div>
+              <input type="hidden" id="selected-service" name="service" aria-label="Serviciul selectat"/>
+            </div>
+
+            <!-- STEP 2: DATE & TIME -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Calendar -->
+              <div>
+                <div class="step-label" data-step="2">Data</div>
+                <div style="background:#fff;border:1px solid rgba(104,93,74,0.12);border-radius:1rem;padding:1rem;">
+                  <!-- Calendar header -->
+                  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+                    <button type="button" id="cal-prev" style="background:none;border:none;cursor:pointer;padding:4px 8px;border-radius:50%;transition:background 0.2s;" onmouseover="this.style.background='#f0e0c8'" onmouseout="this.style.background='none'">
+                      <span class="material-symbols-outlined" style="font-size:18px;color:var(--primary);">chevron_left</span>
+                    </button>
+                    <span id="cal-month-label" style="font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:#1b1d0e;"></span>
+                    <button type="button" id="cal-next" style="background:none;border:none;cursor:pointer;padding:4px 8px;border-radius:50%;transition:background 0.2s;" onmouseover="this.style.background='#f0e0c8'" onmouseout="this.style.background='none'">
+                      <span class="material-symbols-outlined" style="font-size:18px;color:var(--primary);">chevron_right</span>
+                    </button>
+                  </div>
+                  <!-- Day headers -->
+                  <div class="cal-grid" style="margin-bottom:4px;">
+                    <div class="cal-header-day">L</div>
+                    <div class="cal-header-day">M</div>
+                    <div class="cal-header-day">M</div>
+                    <div class="cal-header-day">J</div>
+                    <div class="cal-header-day">V</div>
+                    <div class="cal-header-day">S</div>
+                    <div class="cal-header-day">D</div>
+                  </div>
+                  <!-- Day cells -->
+                  <div class="cal-grid" id="cal-days" role="grid" aria-label="Calendar selectie data"></div>
+                </div>
+                <input type="hidden" id="selected-date" name="date" aria-label="Data selectată"/>
+              </div>
+
+              <!-- Time Slots -->
+              <div>
+                <div class="step-label" data-step="3">Ora</div>
+                <div class="grid grid-cols-3 gap-2" id="time-grid">
+                  <button class="time-slot" type="button" data-time="10:00">10:00</button>
+                  <button class="time-slot" type="button" data-time="11:00">11:00</button>
+                  <button class="time-slot" type="button" data-time="12:00">12:00</button>
+                  <button class="time-slot disabled" type="button" data-time="13:00">13:00</button>
+                  <button class="time-slot" type="button" data-time="14:00">14:00</button>
+                  <button class="time-slot" type="button" data-time="15:00">15:00</button>
+                  <button class="time-slot" type="button" data-time="16:00">16:00</button>
+                  <button class="time-slot" type="button" data-time="17:00">17:00</button>
+                  <button class="time-slot disabled" type="button" data-time="18:00">18:00</button>
+                  <button class="time-slot" type="button" data-time="19:00">19:00</button>
+                  <button class="time-slot" type="button" data-time="20:00">20:00</button>
+                </div>
+                <input type="hidden" id="selected-time" name="time" aria-label="Ora selectată"/>
+                <p style="font-family:'Montserrat',sans-serif;font-size:11px;color:#7d766c;margin-top:8px;font-style:italic;">
+                  <span class="material-symbols-outlined" style="font-size:12px;vertical-align:middle;">block</span> Indisponibil
+                </p>
+              </div>
+            </div>
+
+            <!-- STEP 4: PERSONAL DETAILS -->
+            <div>
+              <div class="step-label" data-step="4">Detalii de Contact</div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label class="field-label" for="b-name">Numele tău</label>
+                  <input class="quiet-input" id="b-name" type="text" placeholder="Prenume Nume" autocomplete="name" required/>
+                </div>
+                <div>
+                  <label class="field-label" for="b-phone">Telefon</label>
+                  <input class="quiet-input" id="b-phone" type="tel" placeholder="+40 7xx xxx xxx" autocomplete="tel" required/>
+                </div>
+              </div>
+              <div style="margin-top:1.5rem;">
+                <label class="field-label" for="b-notes">Mențiuni speciale (opțional)</label>
+                <textarea class="quiet-input" id="b-notes" rows="2" placeholder="Ex: păr lung, prima vizită, alergii..."></textarea>
+              </div>
+            </div>
+
+            <!-- BOOKING SUMMARY -->
+            <div id="booking-summary" style="display:none;" class="summary-box">
+              <div style="font-family:'Montserrat';font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;">Rezumatul Rezervării</div>
+              <div class="summary-row"><span class="summary-key">Serviciu</span><span class="summary-val" id="sum-service">–</span></div>
+              <div class="summary-row"><span class="summary-key">Data</span><span class="summary-val" id="sum-date">–</span></div>
+              <div class="summary-row"><span class="summary-key">Ora</span><span class="summary-val" id="sum-time">–</span></div>
+            </div>
+
+            <!-- SUBMIT -->
+            <div style="text-align:center;">
+              <button id="submit-btn" class="btn-primary" type="submit" style="padding:1.1rem 3rem;font-size:12px;letter-spacing:0.18em;">
+                <span id="submit-text">Trimite Cererea</span>
+                <span id="submit-icon" class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+              </button>
+              <p style="font-family:'Montserrat',sans-serif;font-size:11px;color:#7d766c;margin-top:12px;">Vă vom contacta cât mai curând pentru confirmare.</p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#efefd7;border-top:1px solid rgba(104,93,74,0.12);">
+  <nav aria-label="Navigare footer" class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--primary);">Aurelia Hair Studio</div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:14px;line-height:1.65;color:#4b463d;">Esența frumuseții tale naturale, cultivată cu măiestrie.</p>
+        <div class="flex gap-3 pt-1">
+          <a href="https://www.facebook.com/profile.php?id=61572801821095" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center" style="border:1px solid rgba(104,93,74,0.2);"><i class="fa-brands fa-facebook text-sm" style="color:#1877F2"></i></a>
+          <a href="https://www.instagram.com/aureliamoga749?igsh=M29ramxvZG9yc3p6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center" style="border:1px solid rgba(104,93,74,0.2);"><i class="fa-brands fa-instagram text-sm" style="color:#E4405F"></i></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Aurelia+Hair+Studio+Boda+Oszkar+9+Oradea" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center" style="border:1px solid rgba(104,93,74,0.2);"><i class="fa-brands fa-google text-sm" style="color:#4285F4"></i></a>
+          <a href="https://www.tiktok.com/@aurelia.moga46?_r=1&_t=ZN-96ePt0rUFc6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center" style="border:1px solid rgba(104,93,74,0.2);"><i class="fa-brands fa-tiktok text-sm"></i></a>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="Contact.html" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;"><i class="fa-solid fa-location-dot" style="color:var(--primary);width:16px;"></i> Boda Oszkar 9, Oradea</a></li>
+          <li><a href="tel:+40745919066" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;"><i class="fa-solid fa-phone" style="color:#25D366;width:16px;"></i> +40 745 919 066</a></li>
+          <li><a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;"><i class="fa-brands fa-whatsapp" style="color:#25D366;width:16px;"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Program</h4>
+        <ul class="space-y-2" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">
+          <li>Luni – Vineri: 10:00 – 20:00</li>
+          <li>Sâmbătă: 10:00 – 16:00</li>
+          <li>Duminică: 13:00 – 17:00</li>
+        </ul>
+        <p style="font-family:'Montserrat';font-size:11px;color:#7d766c;font-style:italic;margin-top:6px;">Nu găsiți un interval potrivit? <a href="tel:+40745919066" style="text-decoration:underline;color:var(--primary);">Sunați-ne</a></p>
+      </div>
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Servicii Populare</h4>
+        <ul class="space-y-3">
+          <li><a href="Servicii.html#coafura" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Coafură &amp; Frizerie</a></li>
+          <li><a href="Servicii.html#manichiura" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Manichiură &amp; Pedichiură</a></li>
+          <li><a href="Servicii.html#vopsit" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Vopsit</a> &amp; <a href="Servicii.html#masaj" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Masaj</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="border-top:1px solid rgba(104,93,74,0.1);">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-6 text-center">
+      <p style="font-family:'Montserrat';font-size:11px;color:#7d766c;">© <span id="copyright-year"></span> Aurelia Hair Studio Oradea. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── HEADER ── */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+      header.style.background = 'rgba(251,251,226,0.96)';
+      header.style.backdropFilter = 'blur(18px)';
+      header.style.borderBottom = '1px solid rgba(104,93,74,0.12)';
+      header.style.boxShadow = '0 4px 24px rgba(104,93,74,0.08)';
+    } else {
+      header.classList.remove('scrolled');
+      header.style.background = '';
+      header.style.backdropFilter = '';
+      header.style.borderBottom = '';
+      header.style.boxShadow = '';
+    }
+  }, { passive: true });
+
+  /* ── MOBILE MENU ── */
+  document.getElementById('open-menu').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('close-menu').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+
+  /* ── REVEAL ── */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.05 });
+  revealEls.forEach(el => revObserver.observe(el));
+
+  /* ── BOOKING STATE ── */
+  let selectedService = '';
+  let selectedDate = '';
+  let selectedTime = '';
+
+  /* ── SERVICE SELECTION ── */
+  document.querySelectorAll('.svc-btn').forEach(btn => {
+    btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.svc-btn').forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-pressed', 'false'); });
+      this.classList.add('selected');
+      this.setAttribute('aria-pressed', 'true');
+      selectedService = this.dataset.service;
+      document.getElementById('selected-service').value = selectedService;
+      updateSummary();
+    });
+  });
+
+  /* ── TIME SLOT SELECTION ── */
+  document.querySelectorAll('.time-slot:not(.disabled)').forEach(btn => {
+    btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.time-slot').forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-pressed', 'false'); });
+      this.classList.add('selected');
+      this.setAttribute('aria-pressed', 'true');
+      selectedTime = this.dataset.time;
+      document.getElementById('selected-time').value = selectedTime;
+      updateSummary();
+    });
+  });
+
+  /* ── CALENDAR ── */
+  const monthNamesRo = ['Ianuarie','Februarie','Martie','Aprilie','Mai','Iunie','Iulie','August','Septembrie','Octombrie','Noiembrie','Decembrie'];
+  let calDate = new Date();
+  calDate.setDate(1);
+  let selectedCalDate = null;
+  let focusedDay = null;
+
+  function renderCalendar() {
+    const year = calDate.getFullYear();
+    const month = calDate.getMonth();
+    document.getElementById('cal-month-label').textContent = monthNamesRo[month] + ' ' + year;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const startOffset = firstDay === 0 ? 6 : firstDay - 1;
+
+    const today = new Date();
+    today.setHours(0,0,0,0);
+
+    let html = '';
+
+    for (let i = 0; i < startOffset; i++) {
+      html += '<div class="cal-day cal-empty" aria-hidden="true"></div>';
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const cellDate = new Date(year, month, d);
+      const dateStr = year + '-' + String(month+1).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+      let cls = 'cal-day';
+      let tabindex = '-1';
+      let ariaSelected = 'false';
+      let ariaDisabled = 'false';
+      let role = 'gridcell';
+
+      if (cellDate < today) {
+        cls += ' cal-past';
+        ariaDisabled = 'true';
+      } else {
+        if (cellDate.toDateString() === today.toDateString()) cls += ' cal-today';
+        if (selectedCalDate === dateStr) { cls += ' cal-selected'; ariaSelected = 'true'; tabindex = '0'; focusedDay = d; }
+        if (!selectedCalDate && d === 1) { tabindex = '0'; }
+        html += '<button type="button" class="' + cls + ' clickable-day" data-date="' + dateStr + '" data-day="' + d + '" role="' + role + '" aria-selected="' + ariaSelected + '" aria-disabled="' + ariaDisabled + '" tabindex="' + tabindex + '">' + d + '</button>';
+        continue;
+      }
+      html += '<button type="button" class="' + cls + '" role="' + role + '" aria-disabled="true" tabindex="-1">' + d + '</button>';
+    }
+
+    document.getElementById('cal-days').innerHTML = html;
+
+    document.querySelectorAll('.clickable-day').forEach(el => {
+      el.addEventListener('click', function() {
+        selectDay(this);
+      });
+      el.addEventListener('keydown', function(e) {
+        handleCalKeydown(e, this);
+      });
+    });
+  }
+
+  function selectDay(el) {
+    document.querySelectorAll('.clickable-day').forEach(c => {
+      c.classList.remove('cal-selected');
+      c.setAttribute('aria-selected', 'false');
+      c.setAttribute('tabindex', '-1');
+      if (c.classList.contains('cal-today')) c.classList.add('cal-today');
+    });
+    el.classList.add('cal-selected');
+    el.setAttribute('aria-selected', 'true');
+    el.setAttribute('tabindex', '0');
+    el.focus();
+    selectedCalDate = el.dataset.date;
+    selectedDate = selectedCalDate;
+    document.getElementById('selected-date').value = selectedDate;
+    const parts = selectedDate.split('-');
+    const displayDate = parts[2] + ' ' + monthNamesRo[parseInt(parts[1])-1] + ' ' + parts[0];
+    updateSummary(displayDate);
+  }
+
+  function handleCalKeydown(e, el) {
+    const days = Array.from(document.querySelectorAll('.clickable-day'));
+    const idx = days.indexOf(el);
+    let next = null;
+
+    if (e.key === 'ArrowRight') { next = days[idx + 1]; e.preventDefault(); }
+    else if (e.key === 'ArrowLeft') { next = days[idx - 1]; e.preventDefault(); }
+    else if (e.key === 'ArrowDown') { next = days[idx + 7]; e.preventDefault(); }
+    else if (e.key === 'ArrowUp') { next = days[idx - 7]; e.preventDefault(); }
+    else if (e.key === 'Enter' || e.key === ' ') { selectDay(el); e.preventDefault(); return; }
+    else if (e.key === 'Home') { next = days[0]; e.preventDefault(); }
+    else if (e.key === 'End') { next = days[days.length - 1]; e.preventDefault(); }
+
+    if (next && !next.classList.contains('cal-past')) {
+      el.setAttribute('tabindex', '-1');
+      next.setAttribute('tabindex', '0');
+      next.focus();
+    }
+  }
+
+  document.getElementById('cal-prev').addEventListener('click', () => {
+    const now = new Date();
+    const prev = new Date(calDate.getFullYear(), calDate.getMonth() - 1, 1);
+    if (prev >= new Date(now.getFullYear(), now.getMonth(), 1)) {
+      calDate = prev;
+      renderCalendar();
+    }
+  });
+  document.getElementById('cal-next').addEventListener('click', () => {
+    calDate = new Date(calDate.getFullYear(), calDate.getMonth() + 1, 1);
+    renderCalendar();
+  });
+
+  renderCalendar();
+
+  /* ── SUMMARY UPDATE ── */
+  let displayDateStr = '';
+  function updateSummary(dateDisplay) {
+    if (dateDisplay) displayDateStr = dateDisplay;
+    const hasAny = selectedService || selectedDate || selectedTime;
+    const summaryEl = document.getElementById('booking-summary');
+    if (hasAny) {
+      summaryEl.style.display = 'block';
+      document.getElementById('sum-service').textContent = selectedService || '–';
+      document.getElementById('sum-date').textContent = displayDateStr || selectedDate || '–';
+      document.getElementById('sum-time').textContent = selectedTime || '–';
+    }
+  }
+
+  /* ── FORM SUBMIT ── */
+  document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('b-name').value.trim();
+    const phone = document.getElementById('b-phone').value.trim();
+    const notes = document.getElementById('b-notes').value.trim();
+    let hasError = false;
+
+    // Reset previous errors
+    document.querySelectorAll('.quiet-input').forEach(i => { i.style.borderBottom = ''; i.removeAttribute('aria-invalid'); i.removeAttribute('aria-describedby'); });
+    document.querySelectorAll('.field-error').forEach(e => e.remove());
+
+    function showError(inputId, msg) {
+      const input = document.getElementById(inputId);
+      input.style.borderBottom = '2px solid #ba1a1a';
+      input.setAttribute('aria-invalid', 'true');
+      const errId = inputId + '-error';
+      input.setAttribute('aria-describedby', errId);
+      const errEl = document.createElement('span');
+      errEl.id = errId;
+      errEl.className = 'field-error';
+      errEl.setAttribute('role', 'alert');
+      errEl.style.cssText = 'color:#ba1a1a;font-size:12px;font-family:Montserrat,sans-serif;margin-top:4px;display:block;';
+      errEl.textContent = msg;
+      input.parentNode.appendChild(errEl);
+      hasError = true;
+    }
+
+    if (!name) showError('b-name', 'Introduceți numele');
+    if (!phone) showError('b-phone', 'Introduceți numărul de telefon');
+    if (!selectedService) {
+      document.getElementById('service-grid').querySelector('.svc-btn')?.focus();
+      hasError = true;
+    }
+    if (hasError) return;
+
+    // Check allowed hours: 08:00 - 21:00
+    const now = new Date();
+    const hour = now.getHours();
+    if (hour < 8 || hour >= 21) {
+      alert("Ne pare rău, primim mesaje doar între orele 08:00 și 21:00. Vă rugăm să reveniți în acest interval.");
+      return; // Stop submission
+    }
+
+    // Build WhatsApp message
+    let mesaj = 'Bună! Aș dori o programare:\n';
+    mesaj += '• Serviciu: ' + selectedService + '\n';
+    mesaj += '• Data: ' + (displayDateStr || selectedDate) + '\n';
+    mesaj += '• Ora: ' + selectedTime + '\n';
+    mesaj += '• Nume: ' + name + '\n';
+    mesaj += '• Telefon: ' + phone + '\n';
+    if (notes) mesaj += '• Mențiuni: ' + notes + '\n';
+    mesaj += '\n_Trimis de pe site-ul Aurelia Hair Studio_';
+
+    // Open WhatsApp with pre-filled message
+    const waLink = document.createElement('a');
+    waLink.href = 'https://wa.me/40745919066?text=' + encodeURIComponent(mesaj);
+    waLink.target = '_blank';
+    waLink.rel = 'noopener noreferrer';
+    document.body.appendChild(waLink);
+    waLink.click();
+    document.body.removeChild(waLink);
+
+    // Update success summary
+    document.getElementById('srv-summary').textContent = selectedService;
+    document.getElementById('dt-summary').textContent = displayDateStr || selectedDate;
+    document.getElementById('tm-summary').textContent = selectedTime;
+
+    // Dynamic response timing based on business hours
+    const day = now.getDay();
+    const isWorkingHours = (day >= 1 && day <= 5 && hour >= 10 && hour < 20) ||
+                           (day === 6 && hour >= 10 && hour < 16) ||
+                           (day === 0 && hour >= 13 && hour < 17);
+    document.getElementById('response-msg').textContent = isWorkingHours
+      ? 'Vom confirma programarea cat mai curand. Vă mulțumim!'
+      : 'Vom verifica mesajul la deschiderea salonului și vă vom contacta pentru confirmare. Vă mulțumim!';
+
+    // Update fallback WhatsApp link to include pre-filled message
+    document.getElementById('whatsapp-success-link').href = 'https://wa.me/40745919066?text=' + encodeURIComponent(mesaj);
+
+    // Show success state
+    document.getElementById('booking-form').style.display = 'none';
+    const success = document.getElementById('booking-success');
+    success.style.display = 'block';
+    success.style.animation = 'fadeIn 0.5s ease forwards';
+  });
+
+  // Reset red borders on input
+  document.querySelectorAll('.quiet-input').forEach(input => {
+    input.addEventListener('focus', () => { input.style.borderBottom = ''; });
+  });
+
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+<style>
+  @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</body>
+</html>

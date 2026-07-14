@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="light" lang="ro">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galerie – Aurelia Hair Studio Oradea</title>
+<meta name="description" content="Galeria de lucrări Aurelia Hair Studio – coafuri, vopsit, styling și îngrijire premium în Oradea."/>
+<script src="js/tailwind.min.js"></script>
+<link href="css/fonts.css" rel="stylesheet"/>
+<link href="css/material-symbols.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/fontawesome.min.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "@id": "https://AureliaHairStudio.ro",
+  "name": "Aurelia Hair Studio",
+  "description": "Coafură, manichiură, masaj și tratamente de lux în Oradea.",
+  "image": "https://AureliaHairStudio.ro/images/Logo1.jpg",
+  "url": "https://AureliaHairStudio.ro",
+  "telephone": "+40-745-919-066",
+  "email": "contact@aureliahairstudio.ro",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Boda Oszkar 9",
+    "addressLocality": "Oradea",
+    "addressRegion": "Bihor",
+    "postalCode": "410047",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.0261015,
+    "longitude": 21.9328077
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "13:00",
+      "closes": "17:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Oradea"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61572801821095",
+    "https://www.instagram.com/aureliamoga749",
+    "https://www.tiktok.com/@aurelia.moga46"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicii Aurelia Hair Studio",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Coafură & Frizerie",
+          "description": "Tuns, aranjat din perie, coafat ocazii, împletituri"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vopsit",
+          "description": "Vopsit, balayage, airtouch, suvițat, nuanțare"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Masaj",
+          "description": "Masaj relaxare, masaj terapeutic, tratamente faciale"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Manichiură & Pedichiură",
+          "description": "Manichiură simplă, semi-permanentă, gel"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "ratingCount": "500"
+  }
+}
+</script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode:"class",
+    theme:{
+      extend:{
+        colors:{
+          "gold":"#D4AF37","background":"#fbfbe2",
+          "surface-container":"#efefd7","surface-container-low":"#f5f5dc",
+          "surface":"#fbfbe2","primary":"#685d4a","on-primary":"#ffffff",
+          "primary-container":"#f7e7ce","on-primary-container":"#726753",
+          "on-surface":"#1b1d0e","on-surface-variant":"#4b463d",
+          "primary-fixed":"#f0e0c8","outline":"#7d766c"
+        },
+        spacing:{"section-gap":"120px","margin-desktop":"80px","margin-mobile":"20px"}
+      }
+    }
+  }
+</script>
+<style>
+  :root { --gold:#D4AF37; --primary:#685d4a; }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Montserrat',sans-serif;background:#fbfbe2;color:#1b1d0e;overflow-x:hidden;}
+
+  .nav-link{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#4b463d;transition:color 0.3s;position:relative;padding-bottom:2px;}
+  .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+  .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);}
+  .nav-link:hover,.nav-link.active{color:var(--primary);}
+  .nav-link.active{font-weight:700;}
+  #site-header:not(.scrolled) .nav-link,
+  #site-header:not(.scrolled) .nav-link.active{color:#fff;}
+  #site-header:not(.scrolled) .nav-link::after{background:#fff;}
+  #site-header:not(.scrolled) .nav-link:hover{color:rgba(255,255,255,0.75);}
+  .brand-label{color:var(--primary);}
+  #site-header:not(.scrolled) .brand-label{color:#fff;}
+
+  .gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.35;}
+  .eyebrow{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.75rem;}
+
+  #mobile-menu{position:fixed;inset:0;background:rgba(251,251,226,0.97);backdrop-filter:blur(20px);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform 0.4s cubic-bezier(.77,0,.18,1);}
+  #mobile-menu.open{transform:translateX(0);}
+  .mobile-nav-link{font-family:'Playfair Display',serif;font-size:2rem;font-weight:600;color:var(--primary);transition:opacity 0.2s;}
+  .mobile-nav-link:hover{opacity:0.7;}
+
+  #site-header{transition:all 0.3s;}
+
+  /* GALLERY GRID */
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  @media(min-width:768px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:16px;}}
+  @media(min-width:1024px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:20px;}}
+
+  .gallery-item{position:relative;overflow:hidden;border-radius:0.75rem;cursor:pointer;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(.2,0,.2,1);}
+  .gallery-item:hover img{transform:scale(1.07);}
+  .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(48,50,33,0.65) 0%,transparent 55%);opacity:0;transition:opacity 0.35s;display:flex;align-items:flex-end;padding:1rem;gap:6px;}
+  .gallery-item:hover .gallery-overlay{opacity:1;}
+
+  /* LIGHTBOX */
+  #lightbox{position:fixed;inset:0;z-index:9999;background:rgba(10,10,8,0.92);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+  #lightbox.show{opacity:1;pointer-events:all;}
+  #lightbox-img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:0.75rem;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:scale(0.94);transition:transform 0.35s cubic-bezier(.2,0,.2,1);}
+  #lightbox.show #lightbox-img{transform:scale(1);}
+  #lightbox-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s;z-index:10;}
+  #lightbox-close:hover{background:rgba(255,255,255,0.22);}
+  #lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.6);white-space:nowrap;}
+  #lightbox-img{transition:transform 0.25s cubic-bezier(.2,0,.2,1);cursor:zoom-in;}
+  #zoom-indicator{position:absolute;bottom:24px;left:24px;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.7);background:rgba(0,0,0,0.45);padding:4px 12px;border-radius:999px;opacity:0;transition:opacity 0.3s;pointer-events:none;}
+  #zoom-indicator.visible{opacity:1;}
+
+  .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.10);color:#fff;border:1px solid rgba(255,255,255,0.15);width:48px;height:48px;border-radius:50%;font-size:24px;cursor:pointer;transition:background 0.2s;z-index:10;display:flex;align-items:center;justify-content:center;}
+  .nav-btn:hover{background:rgba(255,255,255,0.22);}
+  .nav-btn.prev{left:16px;}
+  .nav-btn.next{right:16px;}
+  @media(min-width:768px){.nav-btn.prev{left:24px;}.nav-btn.next{right:24px;}}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(.2,0,.2,1),transform 0.7s cubic-bezier(.2,0,.2,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .delay-100{transition-delay:0.1s;} .delay-200{transition-delay:0.2s;} .delay-300{transition-delay:0.3s;}
+
+  footer a:hover{color:var(--primary);}
+  .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:var(--primary);color:#fff;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2.25rem;border-radius:9999px;transition:all 0.3s;box-shadow:0 8px 24px rgba(104,93,74,0.22);}
+  .btn-primary:hover{background:#574e3d;transform:translateY(-2px);box-shadow:0 16px 40px rgba(104,93,74,0.32);}
+  .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;z-index:9999;text-decoration:none;transition:top 0.2s;}.skip-link:focus{top:0;}
+
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Salt la conținut</a>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" role="dialog" aria-label="Meniu principal">
+  <button id="close-menu" class="absolute top-6 right-6 p-2 text-primary" aria-label="Închide meniu">
+    <span class="material-symbols-outlined text-3xl">close</span>
+  </button>
+  <a class="mobile-nav-link" href="index.html">Acasă</a>
+  <a class="mobile-nav-link" href="Servicii.html">Servicii</a>
+  <a class="mobile-nav-link active" href="Galerie.html">Galerie</a>
+  <a class="mobile-nav-link" href="Testimoniale.html">Testimoniale</a>
+  <a class="mobile-nav-link" href="Contact.html">Contact</a>
+  <a href="Rezervari.html" class="btn-primary mt-4">Rezervă acum</a>
+</div>
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50" style="background:rgba(251,251,226,0);transition:all 0.3s;">
+  <div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-margin-desktop h-20">
+    <a href="index.html" class="flex flex-col items-center flex-shrink-0" style="margin-left:-44px;">
+      <img src="images/Logo1.jpg" alt="Aurelia Hair Studio" class="h-10 w-10 rounded-full object-cover shadow-sm"/>
+      <span class="brand-label" style="font-family:'Montserrat';font-size:9px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Aurelia Hair Studio</span>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a class="nav-link" href="index.html">Acasă</a>
+      <a class="nav-link" href="Servicii.html">Servicii</a>
+      <a class="nav-link active" href="Galerie.html">Galerie</a>
+      <a class="nav-link" href="Testimoniale.html">Testimoniale</a>
+      <a class="nav-link" href="Contact.html">Contact</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+40745919066" class="p-2 hover:text-primary transition-colors" title="Sună-ne"><i class="fa-solid fa-phone" style="color:#25D366"></i></a>
+      <a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" class="p-2 hover:text-primary transition-colors" title="WhatsApp"><i class="fa-brands fa-whatsapp" style="color:#25D366"></i></a>
+      <a href="Rezervari.html" class="btn-primary">Rezervă acum</a>
+    </div>
+    <button id="open-menu" class="md:hidden p-2 text-primary" aria-label="Deschide meniu">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" onclick="closeLightbox()">
+  <button class="nav-btn prev" onclick="event.stopPropagation(); changeImage(-1)" aria-label="Imaginea anterioară">‹</button>
+  <img id="lightbox-img" src="" alt=""/>
+  <button class="nav-btn next" onclick="event.stopPropagation(); changeImage(1)" aria-label="Imaginea următoare">›</button>
+  <button id="lightbox-close" aria-label="Închide" onclick="closeLightbox()">
+    <span class="material-symbols-outlined text-white text-base">close</span>
+  </button>
+  <span id="lightbox-caption"></span>
+  <span id="zoom-indicator">100%</span>
+</div>
+
+<main id="main-content">
+<!-- HERO -->
+<section class="relative h-[480px] md:h-[580px] flex items-center overflow-hidden">
+
+  <!-- Background: salon gray -->
+  <div class="absolute inset-0" style="background:#8B8A84;"></div>
+
+  <!-- Fata Blonda portrait – right 38% (hidden on mobile) -->
+  <div class="absolute inset-y-0 right-0 w-[38%] overflow-hidden hidden md:block">
+    <img src="images/Fata Blonda.jpg" alt="Galerie Aurelia Hair Studio" class="w-full h-full object-cover object-center" loading="eager"/>
+    <!-- Blend edge to gray background -->
+    <div class="absolute inset-y-0 left-0 w-24" style="background:linear-gradient(to left, transparent, #8B8A84);"></div>
+  </div>
+
+  <!-- Subtle dark gradient for text zone – left side (hidden on mobile) -->
+  <div class="absolute inset-y-0 left-0 w-[62%] hidden md:block" style="background:linear-gradient(135deg, rgba(27,29,14,0.25) 0%, rgba(27,29,14,0.08) 40%, transparent 100%);"></div>
+
+  <!-- On mobile: full-width subtle dark gradient -->
+  <div class="absolute inset-0 md:hidden" style="background:linear-gradient(to bottom, rgba(27,29,14,0.05) 0%, rgba(27,29,14,0.25) 100%);"></div>
+
+  <!-- Floating accent blob -->
+  <div class="absolute bottom-0 left-0 w-80 h-80 blur-[120px] -z-0 pointer-events-none" style="background:rgba(212,175,55,0.12); border-radius:50%;"></div>
+
+  <div class="relative z-10 max-w-[1280px] mx-auto px-6 md:px-margin-desktop w-full pt-24">
+    <div class="max-w-2xl md:mr-[42%]">
+      <span style="font-family:'Montserrat';font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(212,175,55,0.9);display:block;margin-bottom:1rem;">Galeria Noastră</span>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,64px);font-weight:700;color:#fff;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1rem;">Arta Frumuseții</h1>
+      <div style="height:1px;width:80px;background:linear-gradient(90deg,transparent,rgba(212,175,55,0.7),transparent);margin-bottom:1.25rem;"></div>
+      <p style="font-family:'Montserrat',sans-serif;font-size:17px;color:rgba(255,255,255,0.8);max-width:520px;line-height:1.6;">Fiecare imagine spune o poveste despre pasiunea noastră pentru detaliu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="py-16 bg-background">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop">
+    <div class="text-center mb-12 reveal">
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(15px,2vw,42px);font-weight:700;color:var(--primary);letter-spacing:-0.02em;line-height:1.1;white-space:nowrap;">Portofoliul nostru – Inspiră-te și rezervă-ți locul</h2>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+
+      <figure class="gallery-item reveal" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(0)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(0)}">
+        <img src="images/Blonda1.jpg" alt="Blonde waves – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-100" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(1)}">
+        <img src="images/Morena.png" alt="Morena – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-200" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(2)}">
+        <img src="images/RoseAida_img019.jpg" alt="Roșcată – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-100" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(3)}">
+        <img src="images/Blonda cu cercei.png" alt="Blondă cu cercei – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-200" data-category="femei tunsoare" role="button" tabindex="0" onclick="openLightbox(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(4)}">
+        <img src="images/Rubia_img011.jpg" alt="Butterfly Cut – Tunsoare" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Tunsoare</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="femei tunsoare" role="button" tabindex="0" onclick="openLightbox(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(5)}">
+        <img src="images/Balayage.jpg" alt="Glass Hair Bob – Tunsoare" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Tunsoare</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-200" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(6)}">
+        <img src="images/Rose_img011.jpg" alt="Peach Fuzz – Balayage" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(7)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(7)}">
+        <img src="images/RBlancaR.jpg" alt="Blondă – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-400" data-category="femei tunsoare" role="button" tabindex="0" onclick="openLightbox(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(8)}">
+        <img src="images/galeriem_14_wolf_cut.jpg" alt="Wolf Cut – Tunsoare" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Tunsoare</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(9)}">
+        <img src="images/aida009.jpg" alt="Aida – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-200" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(10)}">
+        <img src="images/RubiaV.png" alt="Rubia V – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Masaj</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(11)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(11)}">
+        <img src="images/Rubia0.jpg" alt="Rubia – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-200" data-category="barbati styling" role="button" tabindex="0" onclick="openLightbox(12)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(12)}">
+        <img src="images/Ruben7.jpg" alt="Ruben – Bărbați" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Bărbați</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="barbati styling" role="button" tabindex="0" onclick="openLightbox(13)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(13)}">
+        <img src="images/Styling Hombre.png" alt="Styling Hombre – Bărbați" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Bărbați</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-400" data-category="barbati styling" role="button" tabindex="0" onclick="openLightbox(14)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(14)}">
+        <img src="images/MASAJE.jpg" alt="Masaj – Relaxare" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Masaj</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="femei styling" role="button" tabindex="0" onclick="openLightbox(15)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(15)}">
+        <img src="images/Rubio 2 Pelo.jpg" alt="Rubio 2 Pelo – Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Styling</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-400" data-category="barbati styling" role="button" tabindex="0" onclick="openLightbox(16)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(16)}">
+        <img src="images/Chico Corte Moreno.png" alt="Chico Corte Moreno – Men's Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Bărbați</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+      <figure class="gallery-item reveal delay-300" data-category="barbati styling" role="button" tabindex="0" onclick="openLightbox(17)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(17)}">
+        <img src="images/Tip par alb1.jpg" alt="Tip păr alb – Men's Styling" loading="lazy"/>
+        <div class="gallery-overlay">
+          <span style="font-family:'Montserrat';font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:rgba(104,93,74,0.75);padding:4px 12px;border-radius:999px;">Bărbați</span>
+          <span class="material-symbols-outlined" style="color:rgba(255,255,255,0.7);font-size:16px;margin-left:auto;">fullscreen</span>
+        </div>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#efefd7;border-top:1px solid rgba(104,93,74,0.12);">
+  <nav aria-label="Navigare footer" class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="space-y-4">
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--primary);">Aurelia Hair Studio</div>
+        <p style="font-family:'Montserrat',sans-serif;font-size:14px;line-height:1.65;color:#4b463d;">Stil, îngrijire și atenție la detaliu în Oradea.</p>
+        <div class="flex gap-3 pt-2">
+          <a href="https://www.facebook.com/profile.php?id=61572801821095" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-facebook text-sm" style="color:#1877F2"></i></a>
+          <a href="https://www.instagram.com/aureliamoga749?igsh=M29ramxvZG9yc3p6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-instagram text-sm" style="color:#E4405F"></i></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Aurelia+Hair+Studio+Boda+Oszkar+9+Oradea" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-google text-sm" style="color:#4285F4"></i></a>
+          <a href="https://www.tiktok.com/@aurelia.moga46?_r=1&_t=ZN-96ePt0rUFc6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-tiktok text-sm"></i></a>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="Contact.html" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;"><i class="fa-solid fa-location-dot" style="color:var(--primary);width:16px;"></i> Boda Oszkar 9, Oradea</a></li>
+          <li><a href="tel:+40745919066" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;"><i class="fa-solid fa-phone" style="color:#25D366;width:16px;"></i> +40 745 919 066</a></li>
+          <li><a href="https://wa.me/40745919066" target="_blank" rel="noopener noreferrer" style="font-family:'Montserrat';font-size:14px;color:#4b463d;display:flex;align-items:center;gap:8px;"><i class="fa-brands fa-whatsapp" style="color:#25D366;width:16px;"></i> WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Program</h4>
+        <ul class="space-y-2" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">
+          <li>Luni – Vineri: 10:00 – 20:00</li>
+          <li>Sâmbătă: 10:00 – 16:00</li>
+          <li>Duminică: 13:00 – 17:00</li>
+        </ul>
+        <p style="font-family:'Montserrat';font-size:11px;color:#7d766c;font-style:italic;margin-top:6px;">Nu găsiți un interval potrivit? <a href="tel:+40745919066" style="text-decoration:underline;color:var(--primary);">Sunați-ne</a></p>
+      </div>
+      <div class="space-y-4">
+        <h4 style="font-family:'Montserrat';font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--primary);">Servicii Populare</h4>
+        <ul class="space-y-3">
+          <li><a href="Servicii.html#coafura" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Coafură &amp; Frizerie</a></li>
+          <li><a href="Servicii.html#manichiura" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Manichiură &amp; Pedichiură</a></li>
+          <li><a href="Servicii.html#vopsit" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Vopsit</a> &amp; <a href="Servicii.html#masaj" style="font-family:'Montserrat';font-size:14px;color:#4b463d;">Masaj</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div style="border-top:1px solid rgba(104,93,74,0.1);">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-margin-desktop py-6 text-center">
+      <p style="font-family:'Montserrat';font-size:11px;color:#7d766c;">&copy; <span id="copyright-year"></span> Aurelia Hair Studio Oradea. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // HEADER scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+      header.style.background = 'rgba(251,251,226,0.96)';
+      header.style.backdropFilter = 'blur(18px)';
+      header.style.borderBottom = '1px solid rgba(104,93,74,0.12)';
+      header.style.boxShadow = '0 4px 24px rgba(104,93,74,0.08)';
+    } else {
+      header.classList.remove('scrolled');
+      header.style.background = '';
+      header.style.backdropFilter = '';
+      header.style.borderBottom = '';
+      header.style.boxShadow = '';
+    }
+  }, {passive:true});
+
+  // MOBILE MENU
+  document.getElementById('open-menu').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  document.getElementById('close-menu').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+
+  // GALLERY IMAGES (in aceeasi ordine ca referinta)
+  const galleryImages = [
+    'images/Blonda1.jpg',
+    'images/Morena.png',
+    'images/RoseAida_img019.jpg',
+    'images/Blonda cu cercei.png',
+    'images/Rubia_img011.jpg',
+    'images/Balayage.jpg',
+    'images/Rose_img011.jpg',
+    'images/RBlancaR.jpg',
+    'images/galeriem_14_wolf_cut.jpg',
+    'images/aida009.jpg',
+    'images/RubiaV.png',
+    'images/Rubia0.jpg',
+    'images/Ruben7.jpg',
+    'images/Styling Hombre.png',
+    'images/MASAJE.jpg',
+    'images/Rubio 2 Pelo.jpg',
+    'images/Chico Corte Moreno.png',
+    'images/Tip par alb1.jpg'
+  ];
+
+  let currentIndex = 0;
+  let zoomLevel = 1;
+  const ZOOM_MIN = 0.5;
+  const ZOOM_MAX = 3;
+  const ZOOM_STEP = 0.15;
+  let zoomTimeout = null;
+
+  function showZoomIndicator() {
+    const zi = document.getElementById('zoom-indicator');
+    zi.textContent = Math.round(zoomLevel * 100) + '%';
+    zi.classList.add('visible');
+    clearTimeout(zoomTimeout);
+    zoomTimeout = setTimeout(() => zi.classList.remove('visible'), 1200);
+  }
+
+  function applyZoom() {
+    document.getElementById('lightbox-img').style.transform = 'scale(' + zoomLevel + ')';
+    document.getElementById('lightbox-img').style.cursor = zoomLevel > 1 ? 'zoom-out' : 'zoom-in';
+  }
+
+  function resetZoom() {
+    zoomLevel = 1;
+    applyZoom();
+  }
+
+  function openLightbox(index) {
+    currentIndex = index;
+    resetZoom();
+    document.getElementById('lightbox-img').src = galleryImages[index];
+    document.getElementById('lightbox').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    resetZoom();
+    document.getElementById('lightbox').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  function changeImage(direction) {
+    resetZoom();
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+    if (currentIndex >= galleryImages.length) currentIndex = 0;
+    document.getElementById('lightbox-img').src = galleryImages[currentIndex];
+  }
+
+  document.getElementById('lightbox-img').addEventListener('wheel', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.deltaY < 0) {
+      zoomLevel = Math.min(ZOOM_MAX, zoomLevel + ZOOM_STEP);
+    } else {
+      zoomLevel = Math.max(ZOOM_MIN, zoomLevel - ZOOM_STEP);
+    }
+    applyZoom();
+    showZoomIndicator();
+  }, { passive: false });
+
+  document.getElementById('lightbox-img').addEventListener('click', (e) => {
+    if (zoomLevel > 1) {
+      e.stopPropagation();
+      resetZoom();
+      showZoomIndicator();
+    }
+  });
+
+  document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (zoomLevel > 1 && e.target === document.getElementById('lightbox')) {
+      return;
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') changeImage(-1);
+    if (e.key === 'ArrowRight') changeImage(1);
+    if (e.key === '+' || e.key === '=') { zoomLevel = Math.min(ZOOM_MAX, zoomLevel + ZOOM_STEP); applyZoom(); showZoomIndicator(); }
+    if (e.key === '-') { zoomLevel = Math.max(ZOOM_MIN, zoomLevel - ZOOM_STEP); applyZoom(); showZoomIndicator(); }
+    if (e.key === '0') { resetZoom(); showZoomIndicator(); }
+  });
+
+  // SCROLL REVEAL
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => observer.observe(el));
+
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
