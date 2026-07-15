@@ -9,7 +9,19 @@ cd /d "%~dp0"
 
 git add .
 git commit -m "Actualizare site %date% %time%"
-git push
+
+if exist token.txt (
+    set /p TOKEN=<token.txt
+    git push https://Niram1234:%TOKEN%@github.com/Niram1234/-AureliaHairStudio.git main
+) else (
+    echo.
+    echo No se encuentra token.txt
+    echo Pega tu token de GitHub aqui (ghp_...):
+    set /p TOKEN=
+    echo %TOKEN% > token.txt
+    echo Token guardado en token.txt
+    git push https://Niram1234:%TOKEN%@github.com/Niram1234/-AureliaHairStudio.git main
+)
 
 echo.
 echo ====================================
