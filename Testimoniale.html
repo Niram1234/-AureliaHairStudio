@@ -542,6 +542,7 @@
           <a href="https://www.instagram.com/aureliamoga749?igsh=M29ramxvZG9yc3p6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-instagram text-sm" style="color:#E4405F"></i></a>
           <a href="https://www.google.com/maps/search/?api=1&query=Aurelia+Hair+Studio+Boda+Oszkar+9+Oradea" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-google text-sm" style="color:#4285F4"></i></a>
           <a href="https://www.tiktok.com/@aurelia.moga46?_r=1&_t=ZN-96ePt0rUFc6" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors" style="border:1px solid rgba(104,93,74,0.2)"><i class="fa-brands fa-tiktok text-sm"></i></a>
+          <button onclick="sharePage()" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-primary-container transition-colors cursor-pointer" style="border:1px solid rgba(104,93,74,0.2)" title="Compartir" aria-label="Compartir pagina"><i class="fa-solid fa-share-nodes text-sm" style="color:var(--primary)"></i></button>
         </div>
       </div>
       <div class="space-y-4">
@@ -615,6 +616,21 @@
   revealEls.forEach(el => observer.observe(el));
 
   document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+  function sharePage() {
+    if (navigator.share) {
+      navigator.share({ title: 'Aurelia Hair Studio', url: window.location.href }).catch(function(){});
+    } else {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        var t = document.createElement('div');
+        t.textContent = 'Link copiat!';
+        t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;padding:10px 24px;border-radius:8px;font-family:Montserrat,sans-serif;font-size:14px;z-index:9999;opacity:0;transition:opacity 0.3s';
+        document.body.appendChild(t);
+        requestAnimationFrame(function(){ t.style.opacity = '1'; });
+        setTimeout(function(){ t.style.opacity = '0'; setTimeout(function(){ t.remove(); }, 300); }, 2000);
+      });
+    }
+  }
 </script>
 
 </body>
